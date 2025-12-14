@@ -1,0 +1,24 @@
+module.exports = function (config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-junit-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma')
+    ],
+    client: {
+      clearContext: false // deja visible el output Jasmine en navegador
+    },
+    browsers: ['ChromeHeadless'], // Cambia a 'Chrome' si quieres GUI
+    singleRun: true, // Termina tras una corrida (ideal para CI/containers)
+    reporters: ['progress', 'junit'],
+    junitReporter: {
+      outputDir: 'test-results', // Carpeta donde se guardan los XML
+      outputFile: 'junit-results.xml',
+      useBrowserName: false
+    },
+    restartOnFileChange: true
+  });
+};

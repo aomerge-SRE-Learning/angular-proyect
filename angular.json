@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
+            "index": "public/index.html",
+            "browser": "src/main/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -26,7 +27,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/main/styles.css"
             ]
           },
           "configurations": {
@@ -79,7 +80,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/main/styles.css"
             ]
           }
         }
