@@ -29,6 +29,6 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const h1 = compiled.querySelector('h1');
     expect(h1).toBeTruthy();
-    expect(h1?.textContent).toContain('Hello World');
+    expect(h1?.textContent).toContain('Hello, angular-proyect');
   });
 });
