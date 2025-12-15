@@ -6,6 +6,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-junit-reporter'),
+      require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
@@ -19,7 +20,7 @@ module.exports = function (config) {
       }
     },
     singleRun: true, // Termina tras una corrida (ideal para CI/containers)
-    reporters: ['progress', 'junit'],
+    reporters: ['progress', 'junit', 'coverage'],
     junitReporter: {
       outputDir: '/app/test-results', // Carpeta donde se guardan los XML
       outputFile: 'junit-results.xml',
