@@ -21,7 +21,7 @@ module.exports = function (config) {
     singleRun: true, // Termina tras una corrida (ideal para CI/containers)
     reporters: ['progress', 'junit'],
     junitReporter: {
-      outputDir: './test-results', // Carpeta donde se guardan los XML
+      outputDir: '/app/test-results', // Carpeta donde se guardan los XML
       outputFile: 'junit-results.xml',
       useBrowserName: false
     },
