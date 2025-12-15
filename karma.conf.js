@@ -11,7 +11,13 @@ module.exports = function (config) {
     client: {
       clearContext: false // deja visible el output Jasmine en navegador
     },
-    browsers: ['ChromeHeadless'], // Cambia a 'Chrome' si quieres GUI
+    browsers: ['ChromeHeadlessNoSandbox'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox', '--disable-dev-shm-usage']
+      }
+    },
     singleRun: true, // Termina tras una corrida (ideal para CI/containers)
     reporters: ['progress', 'junit'],
     junitReporter: {
