@@ -5,4 +5,5 @@ jenkinsPipelinesExample([
     dockerRegistry: 'angel5572',    
     approvers: 'admin',    
     typeDeployd: "helm" // helm & kubectl    
+    configRepoUrl: "https://github.com/aomerge-SRE-Learning/config-pipelines-jenkins.git"
 ])
